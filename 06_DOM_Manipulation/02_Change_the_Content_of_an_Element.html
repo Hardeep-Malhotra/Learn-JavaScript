@@ -1,0 +1,37 @@
+<!-- 1. Change the Content of an Element
+You can change the content inside an HTML element using JavaScript. The two most common properties for this are innerHTML and textContent:
+
+innerHTML: Allows you to get or set the HTML content inside an element.
+textContent: Allows you to get or set the text content inside an element, ignoring any HTML tags.
+ -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. Change the Content of an Element</title>
+  </head>
+  <body>
+    <div class="example_1">This is Original Content Using innerHTML.</div>
+    <div class="example_2">
+      This is the Original text Content Using textContent.
+    </div>
+
+    <script>
+      // 1. Element ko select kiya aur variable mein store kiya
+      const element1 = document.querySelector(".example_1");
+      const element2 = document.querySelector(".example_2");
+
+      // 2. Ab iski properties ko change kiya
+      element1.innerHTML =
+        "<strong>This text is Changed Using innerHTML!</strong>";
+      element2.textContent =
+        "This text is Changed Using textContent Properties";
+
+      // 3. Console mein check karne ke liye pura element print karo
+      console.log(element1);
+      console.log(element2);
+    </script>
+  </body>
+</html>
